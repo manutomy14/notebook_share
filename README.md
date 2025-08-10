@@ -1,50 +1,55 @@
-# 🌡️ NOAA Temperature Analysis – Machine Test Submission
+# 🌡️ NOAA Temperature Analysis – Climate Data Visualization Project
 
 ## 📌 Overview
-This notebook presents an analysis of temperature data near **Ann Arbor, Michigan, United States**, using NOAA's GHCN-Daily dataset. The goal is to visualize record high and low temperatures from 2005–2014, highlight anomalies in 2015, and map station locations.
+This notebook explores temperature trends near **Ann Arbor, Michigan, United States**, using historical climate data from NOAA's GHCN-Daily dataset. The analysis focuses on identifying record high and low temperatures from 2005–2014, detecting anomalies in 2015, and visualizing station locations.
 
-This submission is part of the **Data Science Intern Machine Test** for **Tranzmeo IT Solutions Pvt. Ltd.**
+The project demonstrates data preprocessing, visualization, and geospatial mapping techniques using Python.
 
 ---
 
 ## 📁 Dataset Description
 
-- **temperature.csv**: Contains daily temperature records from NOAA stations.
+- **temperature.csv**: Daily temperature records from NOAA stations.
 - **BinSize.csv**: Supplementary file for binning or mapping purposes.
 
-### Columns in `temperature.csv`:
+### Key Columns:
 - `id`: Station identification code  
 - `date`: Date in `YYYY-MM-DD` format  
-- `element`: Type of temperature measurement (`TMAX`, `TMIN`)  
+- `element`: Temperature type (`TMAX`, `TMIN`)  
 - `value`: Temperature value in tenths of degrees Celsius  
 
 ---
 
-## 🧪 Tasks Completed
+## 📊 Analysis Highlights
 
-1. **Visualized record high and low temperatures (2005–2014)**  
-   - Line graph with shaded area between TMAX and TMIN  
-2. **Overlayed 2015 anomalies**  
-   - Scatter plot for days where 2015 broke previous records  
-3. **Leap day handling**  
-   - Removed February 29th to ensure consistent comparison  
-4. **Enhanced plot readability**  
-   - Added legends, labels, and removed chart junk  
-5. **Mapped station locations near Ann Arbor**  
-   - Used latitude/longitude data for visualization  
-6. **Plotted 2015 temperature summary**  
-   - Focused analysis on recent year trends  
+1. **Temperature Trends (2005–2014)**  
+   - Line graph of record highs and lows  
+   - Shaded area between TMAX and TMIN  
+
+2. **Anomaly Detection (2015)**  
+   - Scatter plot of days breaking historical records  
+
+3. **Leap Day Handling**  
+   - Removed February 29th for consistency  
+
+4. **Visualization Enhancements**  
+   - Clear legends, labels, and minimal chart clutter  
+
+5. **Geospatial Mapping**  
+   - Plotted station locations near Ann Arbor  
+
+6. **Yearly Summary (2015)**  
+   - Focused temperature overview for recent trends  
 
 ---
 
-## 🛠️ Implementation Notes
+## 🛠️ Tools & Techniques
 
-- Used **pandas** for data manipulation  
-- Used **matplotlib** and **seaborn** for visualization  
-- Removed leap day using logical filtering  
-- Applied `.copy()` to avoid `SettingWithCopyWarning`  
-- Used `groupby` and `strftime('%m-%d')` for day-wise aggregation  
-- Optional: Used `folium` or `plotly` for interactive maps (if applicable)
+- **pandas**: Data manipulation  
+- **matplotlib & seaborn**: Plotting  
+- **folium / plotly** (optional): Interactive maps  
+- `.copy()` used to avoid `SettingWithCopyWarning`  
+- Aggregation via `groupby` and `strftime('%m-%d')`  
 
 ---
 
